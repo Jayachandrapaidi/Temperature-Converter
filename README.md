@@ -2,7 +2,7 @@
 
 A beautiful, responsive **Temperature Converter** web application that allows users to convert temperature values between **Celsius**, **Fahrenheit**, and **Kelvin** in real-time.
 
-![Screenshot](./images/screenshot.png)
+![Screenshot](Images/screenshot.png)
 
 ## 📌 Features
 
