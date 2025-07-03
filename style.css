@@ -1,0 +1,128 @@
+/* ======= Global Reset and Base Styling ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* ======= Background Video ======= */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.7);
+}
+
+/* ======= Main Container ======= */
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+}
+
+/* ======= Temperature Input Fields ======= */
+.temp-container {
+  margin: 15px 0;
+  text-align: left;
+  width: 100%;
+}
+
+.temp-container label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.9);
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.input:focus {
+  background: #fff;
+  box-shadow: 0 0 10px #9ab8f5;
+}
+
+.input::placeholder {
+  color: #888;
+}
+
+/* ======= Footer ======= */
+.footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #eaeaea;
+  padding-bottom: 20px;
+}
+
+/* ======= Animations ======= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======= Responsive Design ======= */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .input {
+    font-size: 0.95rem;
+  }
+}
